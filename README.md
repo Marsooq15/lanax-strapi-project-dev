@@ -1,1 +1,0 @@
-# lanax-strapi-project-dev
