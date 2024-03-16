@@ -13,6 +13,7 @@
     "@strapi/plugin-cloud": "4.20.3",
     "@strapi/plugin-i18n": "4.20.3",
     "@strapi/plugin-users-permissions": "4.20.3",
+    "@strapi/provider-upload-cloudinary": "^4.20.5",
     "@strapi/strapi": "4.20.3",
     "better-sqlite3": "8.6.0",
     "pg": "^8.11.3",
@@ -30,7 +31,7 @@
   },
   "engines": {
     "node": "20.x",
-     "npm": "10.x"
+    "npm": "10.x"
   },
   "license": "MIT"
 }
