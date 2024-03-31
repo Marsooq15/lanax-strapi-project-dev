@@ -22,15 +22,18 @@
       "target": "api::main-category.main-category"
     },
     "subCatImage": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true,
-      "required": true
+      ]
+    },
+    "discountPercentage": {
+      "type": "string"
     }
   }
 }

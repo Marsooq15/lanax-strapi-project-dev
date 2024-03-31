@@ -941,6 +941,7 @@ export interface ApiSubCategorySubCategory extends Schema.CollectionType {
       'api::main-category.main-category'
     >;
     subCatImage: Attribute.Media & Attribute.Required;
+    discountPercentage: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
