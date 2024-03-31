@@ -885,6 +885,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     singularName: 'product';
     pluralName: 'products';
     displayName: 'product';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -900,6 +901,9 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'oneToMany',
       'api::brand.brand'
     >;
+    discountPercentage: Attribute.Integer;
+    isInStock: Attribute.Boolean;
+    isFewLeft: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -924,6 +928,7 @@ export interface ApiSubCategorySubCategory extends Schema.CollectionType {
     singularName: 'sub-category';
     pluralName: 'sub-categories';
     displayName: 'subCategory';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -935,6 +940,7 @@ export interface ApiSubCategorySubCategory extends Schema.CollectionType {
       'oneToOne',
       'api::main-category.main-category'
     >;
+    subCatImage: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

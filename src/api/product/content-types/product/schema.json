@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "product"
+    "displayName": "product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,15 +20,15 @@
       "type": "blocks"
     },
     "prodImage": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true,
-      "required": true
+      ]
     },
     "originalPrice": {
       "type": "float",
@@ -42,6 +43,15 @@
       "relation": "oneToMany",
       "target": "api::brand.brand",
       "mappedBy": "product"
+    },
+    "discountPercentage": {
+      "type": "integer"
+    },
+    "isInStock": {
+      "type": "boolean"
+    },
+    "isFewLeft": {
+      "type": "boolean"
     }
   }
 }
