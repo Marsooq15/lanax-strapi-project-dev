@@ -52,6 +52,10 @@
     },
     "isFewLeft": {
       "type": "boolean"
+    },
+    "isSpecial": {
+      "type": "boolean",
+      "required": true
     }
   }
 }
