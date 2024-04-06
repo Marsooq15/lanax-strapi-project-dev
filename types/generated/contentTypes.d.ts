@@ -905,6 +905,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     isInStock: Attribute.Boolean;
     isFewLeft: Attribute.Boolean;
     isSpecial: Attribute.Boolean & Attribute.Required;
+    specification: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

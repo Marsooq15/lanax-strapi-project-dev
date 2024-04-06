@@ -56,6 +56,9 @@
     "isSpecial": {
       "type": "boolean",
       "required": true
+    },
+    "specification": {
+      "type": "json"
     }
   }
 }
