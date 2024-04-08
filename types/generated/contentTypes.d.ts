@@ -826,11 +826,6 @@ export interface ApiBrandBrand extends Schema.CollectionType {
   attributes: {
     brandName: Attribute.String & Attribute.Required;
     brandLogo: Attribute.Media & Attribute.Required;
-    product: Attribute.Relation<
-      'api::brand.brand',
-      'manyToOne',
-      'api::product.product'
-    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -896,9 +891,9 @@ export interface ApiProductProduct extends Schema.CollectionType {
     prodImage: Attribute.Media & Attribute.Required;
     originalPrice: Attribute.Float & Attribute.Required;
     offerPrice: Attribute.Float & Attribute.Required;
-    brands: Attribute.Relation<
+    brand: Attribute.Relation<
       'api::product.product',
-      'oneToMany',
+      'oneToOne',
       'api::brand.brand'
     >;
     discountPercentage: Attribute.Integer;
@@ -906,6 +901,11 @@ export interface ApiProductProduct extends Schema.CollectionType {
     isFewLeft: Attribute.Boolean;
     isSpecial: Attribute.Boolean & Attribute.Required;
     specification: Attribute.JSON;
+    sub_category: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'api::sub-category.sub-category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

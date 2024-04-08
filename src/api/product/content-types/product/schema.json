@@ -38,11 +38,10 @@
       "type": "float",
       "required": true
     },
-    "brands": {
+    "brand": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::brand.brand",
-      "mappedBy": "product"
+      "relation": "oneToOne",
+      "target": "api::brand.brand"
     },
     "discountPercentage": {
       "type": "integer"
@@ -59,6 +58,11 @@
     },
     "specification": {
       "type": "json"
+    },
+    "sub_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sub-category.sub-category"
     }
   }
 }
